@@ -1,16 +1,21 @@
+motivation:
+simple CLI program acting as universal calculator
+able to solve equations like:
+- 7*x=5
+- 3.14*1231
+It would be useful as fast alternative to wolframalpha in math, it it implemented more features like any polynomials.
+log() means e-based logarithm
+
+
 compilation and run:
  g++ main.cpp -std=c++14 && ./a.out
 
 
-What else could be done, but I didn't?
-- better encapsulation, eg. some functions from AST.h should be not visible from outside
-- makefile, more than one .o  
-- any polynomial. This is not that hard
-- more consistient naming (variable in tokens.h means namely in parser)
-and much more
+design patterns: 
+ - visitor
+ - RAII
 
-
-
-log() means e-based logarithm
+knowns bugs:
+ - implicit multiplication (e.g. 5x) doesn't work
 
 I'm checking against syntax errors, not mathematical errors. Eg. log(-1) is -nan. This behaviour is sometimes desirable. The same with "x=x". If user nan, inf is right float value. This is simple cli app, so user can pipe output to another program, so I prefer to always, when possible return float value, whenever it makes any sense.
