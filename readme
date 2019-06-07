@@ -3,6 +3,8 @@ simple CLI program acting as universal calculator
 able to solve equations like:
 - 7*x=5
 - 3.14*1231
+- log(5)
+only one namely is supported and only +,-,*,/, log() operations. Namely cannot be under logarithm, cannot be squared etc.
 It would be useful as fast alternative to wolframalpha in math, it it implemented more features like any polynomials.
 log() means e-based logarithm
 
